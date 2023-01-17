@@ -1,0 +1,135 @@
+:root {
+  --clr-primary-900: hsl(158, 36%, 37%);
+  --clr-primary-400: hsl(30, 38%, 92%);
+
+  --clr-neutral-900: hsl(212, 21%, 14%);
+  --clr-neutral-500: hsl(228, 12%, 48%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+
+  --ff-primary: "Montserrat", sans-serif;
+  --ff-secondary: "Fraunces", serif;
+
+  --ff-body: var(--ff-primary);
+  --ff-heading: var(--ff-secondary);
+
+  --fw-regular: 500;
+  --fw-bold: 700;
+
+  --fs-body: 0.875rem;
+  --fs-heading: 2rem;
+  --fs-accent: 0.8rem;
+}
+
+/* Utility classes */
+
+.fs-body {
+  font-size: var(--fs-body);
+}
+
+.fs-heading {
+  font-size: var(--fs-heading);
+}
+
+.fs-accent {
+  font-size: var(--fs-accent);
+}
+
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+
+.ff-body {
+  font-family: var(--ff-body);
+}
+
+.ff-heading {
+  font-family: var(--ff-heading);
+}
+
+.bg-clr-primary-400 {
+  background-color: var(--clr-primary-400);
+}
+
+.bg-clr-neutral-100 {
+  background-color: var(--clr-neutral-100);
+}
+
+.text-clr-neutral-500 {
+  color: var(--clr-neutral-500);
+}
+
+.text-clr-neutral-100 {
+  color: var(--clr-neutral-100);
+}
+
+.text-clr-primary-900 {
+  color: var(--clr-primary-900);
+}
+
+/* Styling */
+
+section {
+  --max-width: 375px;
+  --padding: 1rem;
+
+  width: min(var(--max-width) - 2 * var(--padding));
+  margin-inline: auto;
+}
+
+.container {
+  display: grid;
+  border-radius: 1rem;
+  margin-top: 10rem;
+}
+
+.image-wrapper img {
+  border-radius: 1rem 1rem 0 0;
+}
+
+.info-card {
+  display: grid;
+  gap: 1rem;
+
+  padding: 1.5rem;
+}
+
+@media screen and (min-width: 70em) {
+  section {
+    --max-width: 600px;
+    width: min(--max-width);
+  }
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "image-wrapper info-card";
+  }
+  .image-wrapper img {
+    border-radius: 1rem 0 0 1rem;
+  }
+}
+
+.product-type {
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+
+.button {
+  display: flex;
+  gap: 0.775rem;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+
+  background-color: var(--clr-primary-900);
+  border: 0;
+}
+
+.original-price {
+  padding-left: 1rem;
+  vertical-align: top;
+  text-decoration: line-through;
+}
