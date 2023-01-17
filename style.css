@@ -97,6 +97,29 @@ section {
   padding: 1.5rem;
 }
 
+.product-type {
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+
+.button {
+  display: flex;
+  gap: 0.775rem;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  align-items: center;
+
+  background-color: var(--clr-primary-900);
+  border: 0;
+}
+
+.original-price {
+  padding-left: 1rem;
+  vertical-align: top;
+  text-decoration: line-through;
+}
+
 @media screen and (min-width: 70em) {
   section {
     --max-width: 600px;
@@ -110,26 +133,4 @@ section {
   .image-wrapper img {
     border-radius: 1rem 0 0 1rem;
   }
-}
-
-.product-type {
-  text-transform: uppercase;
-  letter-spacing: 0.3rem;
-}
-
-.button {
-  display: flex;
-  gap: 0.775rem;
-  justify-content: center;
-  padding: 1rem;
-  border-radius: 0.5rem;
-
-  background-color: var(--clr-primary-900);
-  border: 0;
-}
-
-.original-price {
-  padding-left: 1rem;
-  vertical-align: top;
-  text-decoration: line-through;
 }
